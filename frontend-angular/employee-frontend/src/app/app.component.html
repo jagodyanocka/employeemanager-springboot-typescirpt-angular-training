@@ -1,4 +1,23 @@
-
-<div *ngFor = "let employee of employees">
-<div>{{employee.name}}</div>
+<div>
+    <div class="h-24 bg-slate-400 mx-2 shadow-xl shadow-black">
+        <div class="grid h-24 place-items-center">
+            <p class="uppercase text-2xl text-slate-700 m-0">Employee Manager</p>
+        </div>
+    </div>
+    <div class="mx-20 my-20 grid grid-cols-3 gap-8 px-4">
+        <div *ngFor = "let employee of employees">
+            <div class="p-5 shadow-xl rounded-lg shadow-gray-500">
+                <img class="mx-32 rounded-full" src="/assets/person-icon.png" width="80px" height="80px"/>
+                <p class="text-lg uppercase font-bold"> ID : {{employee.id}}</p>
+                <p class="text-slate-700"> Name: {{employee.name}}</p>
+                <p class="text-slate-700"> Last Name: {{employee.secondName}}</p>
+                <p class="text-slate-700"> e-mail: {{employee.email}}</p>
+                <p class="text-slate-700"> Job Title: {{employee.jobTitle}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="h-16 bg-slate-500">
+        <footer>
+        </footer>
+    </div>
 </div>
